@@ -1,0 +1,39 @@
+C:\Users\NAME>npm install -g @angular/cli
+changed 266 packages in 165
+49 packages are looking for funding
+run npm fund for details
+C:\Users\NAME>ng v
+'ng' is not recognized as an internal or external command, operable program or batch file.
+
+
+Solution: 
+
+
+Step 1: Check Installation Path
+Find where npm installed the Angular CLI: Run the following command to see where npm has installed the global packages:
+
+
+npm root -g
+This should output the global node_modules path. For example, it might be something like:
+
+
+C:\Users\GMS_02\AppData\Roaming\npm\node_modules
+Locate the ng executable: In the output of the path above (e.g., C:\Users\GMS_02\AppData\Roaming\npm), there should be an ng executable file in the main folder (not in node_modules).
+
+Step 2: Add Path to Environment Variables
+Copy the global npm path (e.g., C:\Users\GMS_02\AppData\Roaming\npm).
+
+Update the System Path:
+
+On Windows, open the Start Menu and search for "Environment Variables."
+Select "Edit the system environment variables".
+In the System Properties window, click on "Environment Variables…".
+Under System variables, scroll down and select "Path", then click Edit.
+Add a New entry and paste the path from Step 1 (e.g., C:\Users\GMS_02\AppData\Roaming\npm).
+Click OK to save all changes.
+Restart Command Prompt: After making these changes, restart the Command Prompt or terminal for the new PATH settings to take effect.
+
+Step 3: Verify Installation
+Now try running:
+
+ng version
